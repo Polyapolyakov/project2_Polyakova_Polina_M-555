@@ -10,6 +10,7 @@ packages = [
 
 [tool.poetry.scripts]
 project = "src.primitive_db.main:main"
+database = "src.primitive_db.main:main"
 
 [tool.poetry.dependencies]
 python = "^3.12"
@@ -22,11 +23,14 @@ ruff = "^0.5.6"
 [tool.ruff]
 line-length = 88
 target-version = "py312"
-exclude = ["venv", ".venv", "dist", "__pycache__"]
+exclude = ["venv", ".venv", "dist", "__pycache__", "data", "db_meta.json"]
 
 [tool.ruff.lint]
-select = ["E", "F", "W"]
+select = ["E", "F", "W", "I", "N"]
 ignore = []
+
+[tool.ruff.format]
+quote-style = "double"
 
 [build-system]
 requires = ["poetry-core"]

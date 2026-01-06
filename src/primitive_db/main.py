@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 
-from .engine import main as engine_main
+from .engine import run
 
 
 def main():
-    engine_main()
-
+    run()
 
 if __name__ == "__main__":
     main()
